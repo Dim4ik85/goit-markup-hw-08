@@ -1,0 +1,65 @@
+.invisibel-features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    /* outline: 2px solid tomato; */
+}
+.list-point {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+
+    & .point {
+        width: calc((100% - 90px) / 4);
+    } 
+}
+.point:not(:last-child) {
+    margin-right: 30px;
+}
+li.point {
+     list-style: none; 
+
+
+    & .instrument {
+       display: inline-block;  
+    }
+}
+.img-card {
+    background-color: $second-grey-color;
+    display: flex;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.img-point {
+    width: 70px;
+    height: 70px;
+}
+h3.featur-f {
+    margin-top: 30px;
+    margin-bottom: 0px;
+
+    color: $primary-text-color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: left;
+    text-transform: uppercase;
+}
+p.featur-f {
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    color: $title-text-color;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    text-align: left;
+    height: 75px;
+    line-height: 1.714;
+}

@@ -1,0 +1,114 @@
+/* Лого Веб Студия */
+.logo {
+    color: $primary-text-color;
+    text-decoration: none;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 0.03;
+  }
+  /* Main nav */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+.site-nav {
+    margin: 0;
+    padding: 0;
+  &.list {
+    display: flex;
+    margin-left: 86px;
+  }
+  & .item:not(:last-child) {
+    margin-right: 50px;
+    }
+}
+/* Навигация и телефон */
+/* .site-nav*/
+.link { 
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    color: $primary-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover, &:focus {
+        color: $accent-text-color;
+    }
+} 
+.link.current {
+    color: $accent-text-color;
+}
+.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: $accent-text-color;
+  border-radius: 2px;
+}
+.list .item:not(:last-child) {
+  margin-right: 30px;
+}
+/* Адрес и телефон */
+img {
+  display: block;
+}
+.item {
+  display: flex;
+  align-items: center;
+  position: relative;
+} 
+.item-mail {
+  margin-right: 10px;
+  width: 16px;
+  height: 11px;
+  cursor: pointer;
+  fill: $title-text-color;
+}
+.item-fon {
+  margin-right: 10px;
+  width: 10px;
+  height: 15px;
+  cursor: pointer;
+  fill: $title-text-color;
+}
+.site-adress {
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+ .lint {
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* list-style: none; */
+
+   &:hover,
+   &:focus {
+      color: $title-text-color;
+      transform: scale(1.2);
+      }
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+     &:hover >.item-mail,
+     &:focus >.item-mail,
+     &:hover >.item-fon,
+     &:focus >.item-fon{
+       fill: $accent-text-color;
+    }
+ }
+}

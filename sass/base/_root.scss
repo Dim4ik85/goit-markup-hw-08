@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body, button {
+    background-color: $primary-white-color;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+}
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* убрали точки у ссылок */
+.list a {
+    text-decoration: none;
+}
+
+.social {
+    list-style: none;
+}
+.logo-web {
+    color: $accent-text-color;
+  }

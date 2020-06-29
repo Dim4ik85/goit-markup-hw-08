@@ -1,0 +1,163 @@
+.footer-f {
+    background-color: $footer-color;
+}
+.container-footer{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 48px 15px 28px 15px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-lg {
+    display: flex;
+    flex-direction: column;
+} 
+.logo-f {
+    color: $primary-white-color;
+    text-decoration: none;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+.adress-studio {
+    font-style: normal;
+    margin-right: 69px;
+}
+.place {
+    color: $primary-white-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    width: 231px;
+    height: 21px;
+
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.footer-mails {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+.general {
+    width: 231px;
+    height: 21px;
+    margin-top: 9px;   
+}
+.adress-list {
+    padding: 0px;
+    list-style: none;
+ }
+ .footer-s {
+    width: 206px;
+    height: 81px;
+    margin-right: 93px;
+ }
+.footer-h {
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-white-color;
+}
+.footer-social{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.aria-footer:not(:last-child) {
+        margin-right: 10px;
+}
+.label-footer {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $primary-white-color;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus{
+        background-color: $accent-text-color;
+        transform: scale(1.2); 
+    }
+}
+/* Форма подписки */
+.footer-subscription {
+    width: auto;
+    margin-left: auto;
+ }
+.footer-form {
+    display: flex;
+    justify-content: end;
+}
+.footer-input {
+    display: inline-block;
+    width: 358px;
+    height: 50px;
+    background-color: inherit;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.footer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0;
+    min-width: 200px;
+    border: 0;
+    color: $primary-white-color;
+    background-color: $accent-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover, &:focus {
+    transform: scale(1.1);
+    }
+}
+.footer-icon {
+    fill: $primary-white-color;
+    margin-left: 10px;
+}
+p.developer {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
