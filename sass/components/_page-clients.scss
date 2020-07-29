@@ -25,7 +25,7 @@
 .company {
     display: flex;
     align-items: center;
-    width: 170px;
+    //width: 170px;
     height: 90px;
     border: 1px solid $clients-color;
     border-radius: 4px;
@@ -39,7 +39,59 @@
         transform: scale(1.2);
     }
 }
+@media screen and (min-width: 768px) {
+    .company {
+        width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+    .company {
+        width: 170px;
+  }
+}
 .logo_1, .logo_2, .logo_3, .logo_4, .logo_5, .logo_6 {
     margin-right: auto;
     margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+    .list-client {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 767px) {
+    .pic {
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .list-client {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 768px) {
+    .pic {
+        width: calc((100% - 6 * 15px) / 3);
+        margin: 15px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .list-client {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .pic {
+        width: calc((100% - 12 * 15px) / 6);
+        margin: 15px;
+    }
 }

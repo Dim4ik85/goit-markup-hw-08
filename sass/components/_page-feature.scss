@@ -15,6 +15,12 @@
             z-index: -1;
         
         }
+        
+}
+@media screen and (max-width: 1199px){
+    .feature {
+        display: none;
+    }
 }
 h2.task {
     font-weight: 700;

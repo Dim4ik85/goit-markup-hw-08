@@ -1,43 +1,83 @@
-.invisibel-features {
+.invisibel-features .container {
     padding-top: 94px;
     padding-bottom: 94px;
-    /* outline: 2px solid tomato; */
+    border-bottom: 1px solid #ececec;
 }
-.list-point {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
 
-    & .point {
-        width: calc((100% - 90px) / 4);
-    } 
+.list-point {
+    display: block;
 }
-.point:not(:last-child) {
-    margin-right: 30px;
+@media screen and (min-width: 768px) {
+    .list-point {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        & .point {
+            width: 354px;
+        }
+        .point:not(:last-child) {
+            margin-right: -15px;
+            margin: 0px;
+        } 
+        .img-card {
+            width: 354px;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .list-point {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+
+        & .point {
+            width: calc((100% - 90px) / 4);
+        }
+        .point:not(:last-child) {
+            margin-right: 30px;
+        } 
+        .img-card {
+            background-color: $second-grey-color;
+            display: flex;
+            justify-content: center;
+            width: 270px;
+            height: 120px;
+            border-radius: 4px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        h3.featur-f {
+            text-align: left;
+        }
+    }
 }
 li.point {
-     list-style: none; 
-
+    list-style: none; 
+    text-align: center;
 
     & .instrument {
        display: inline-block;  
     }
 }
+
+.img-point {
+    width: 70px;
+    height: 70px;
+}
 .img-card {
     background-color: $second-grey-color;
-    display: flex;
-    justify-content: center;
-    width: 270px;
+    display: block;
+    background-position: center;
+    width: 450px;
     height: 120px;
     border-radius: 4px;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 100px;
     padding-right: 100px;
-}
-.img-point {
-    width: 70px;
-    height: 70px;
 }
 h3.featur-f {
     margin-top: 30px;
@@ -48,7 +88,7 @@ h3.featur-f {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
 }
 p.featur-f {

@@ -12,51 +12,65 @@
 <body>
     <!-- Header-->
     <header class="header">
-        <nav class="container main-nav">
+        <div class="container flex-header">
+            <div class="header-burger">
+                <!--<nav class="container main-nav">-->
                 <a href="./index.html" class="logo">
                     <span class="logo-web">Web</span> Studio
                 </a>
-                <ul class="site-nav list">
-                    <li class="item active">
-                        <a href="./index.html" class="link current">Студия</a>
-                    </li>
-                    <li class="item">
-                        <a href="./portfolio.html" class="link">Портфолио</a>
-                    </li>
-                    <li class="item">
-                        <a href="" class="link">Контакты</a>
-                    </li>   
-                </ul>
-                <ul class="site-adress list">
-                    <li class="item">
+
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                      <use class="icon-cross" href="./img/sprite.svg#cross"></use>
+                      <use class="icon-menu" href="./img/sprite.svg#menu"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="menu-container" id="menu-container" data-menu>
+                <nav>
+                    <ul class="site-nav list flex-nav">
+                        <li class="item">
+                            <a href="./index.html" class="link current">Студия</a>
+                        </li>
+                        <li class="item">
+                            <a href="./portfolio.html" class="link">Портфолио</a>
+                        </li>
+                        <li class="item">
+                            <a href="" class="link">Контакты</a>
+                        </li>   
+                    </ul>
+                </nav>
+                <address class="site-adress mail-nav">
+                    
                        <!-- <img class="img-header" src="./img/envelope.svg" alt="Почта компании"> -->
-                        <a href="mailto:info@devstudio.com" class="lint">
-                            <svg class="item-mail">
+                        <a href="mailto:info@devstudio.com" class="link">
+                            <svg class="item-icon" width="16" height="11">
                                 <use href="./img/symbol-defs.svg#icon-envelope"></use>
                             </svg> info@devstudio.com
                         </a>
-                    </li>
-                    <li class="item">
-                        <!--<img class="img-header" src="./img/fon.svg" alt="Телефон компании"> -->
-                        <a href="tel:+380961111111" class="lint">
-                            <svg class="item-fon">
+                    <!--<img class="img-header" src="./img/fon.svg" alt="Телефон компании"> -->
+                        <a href="tel:+380961111111" class="link">
+                            <svg class="item-icon" width="10" height="15">
                                 <use href="./img/symbol-defs.svg#icon-fon"></use>
                             </svg>+38 096 111 11 11
                         </a>
-                    </li>
-                </ul>
-        </nav>
+                   
+                </address>
+            </div>
+        </div>    
     </header>
     <!-- Main part-->
     <main>
         <!--Baner -->
         <section class="hero">
-            <!--<img src="./img/baner.png" alt="Банер"> -->
-            <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <!--<a href="" class="button primary data-modal-open">Заказать услугу</a>-->
-            <button  class="button primary" data-modal-open>Заказать услугу</button>
-<!--Всплывает модальное окно-->        
-        </section>
+            <div class="hero__container">
+                <!--<img src="./img/baner.png" alt="Банер"> -->
+                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+                <!--<a href="" class="button primary data-modal-open">Заказать услугу</a>-->
+                <button  class="button primary" data-modal-open>Заказать услугу</button>
+    <!--Всплывает модальное окно  --> 
+            </div>
+        </section>      
         <!--Features-->
         <section class="invisibel-features">
             <!--Скрытый заголовок.-->
@@ -139,8 +153,12 @@
                 <h2 class="task">Наша команда</h2>
                 <ul class="list comando">
                     <li class="social-item">
-                        <img class="photo" src="./img/john.jpg" alt="john smith" width="270" height="260" />
-                        <h3 class="name">John Smith</h3>
+                        <div class="thumb">
+                            <img srcset="./img/photo1.jpg 1x, ./img/photo1@2x.jpg 2x, ./img/photo1@3x.jpg 3x"
+                              src="./img/photo1.jpg" alt="Николай Кучеренко"
+                              class="photo"/>
+                        </div>
+                        <h3 class="name">Николай Кучеренко</h3>
                         <p class="profi">Product Designer</p>
                         <ul class="social">
                             <li class="gatjet">
@@ -178,8 +196,12 @@
                         </ul>
                     </li>               
                     <li class="social-item">
-                        <img class="photo" src="./img/marta.jpg" alt="marta stewart" width="270" height="260" />
-                        <h3 class="name">Marta Stewart</h3>
+                        <div class="thumb">
+                            <img srcset="./img/photo2.jpg 1x, ./img/photo2@2x.jpg 2x, ./img/photo2@3x.jpg 3x"
+                              src="./img/photo2.jpg" alt="Ольга Иванова"
+                              class="photo"/>
+                        </div>
+                        <h3 class="name">Ольга Иванова</h3>
                         <p class="profi">Frontend Developer</p>
                         <ul class="social">
                             <li class="gatjet">
@@ -217,8 +239,12 @@
                         </ul>
                     </li>
                     <li class="social-item">
-                        <img class="photo" src="./img/robert.jpg" alt="robert jakis" width="270" height="260" />
-                        <h3 class="name">Robert Jakis</h3>
+                        <div class="thumb">
+                            <img srcset="./img/photo3.jpg 1x, ./img/photo3@2x.jpg 2x, ./img/photo3@3x.jpg 3x"
+                              src="./img/photo3.jpg" alt="Андрей Шевченко"
+                              class="photo"/>
+                        </div>
+                        <h3 class="name">Андрей Шевченко</h3>
                         <p class="profi">Marketing</p>
                         <ul class="social">
                             <li class="gatjet">
@@ -256,8 +282,12 @@
                         </ul>
                     </li>            
                     <li class="social-item">
-                        <img class="photo" src="./img/martin.jpg" alt="martin doe" width="270" height="260" />
-                        <h3 class="name">Martin Doe</h3>
+                        <div class="thumb">
+                            <img srcset="./img/photo4.jpg 1x, ./img/photo4@2x.jpg 2x, ./img/photo4@3x.jpg 3x"
+                              src="./img/photo4.jpg" alt="Иван Николаев"
+                              class="photo"/>
+                        </div>
+                        <h3 class="name">Иван Николаев</h3>
                         <p class="profi">UI Designer</p>
                         <ul class="social">
                             <li class="gatjet">
@@ -356,78 +386,82 @@
     </main>
     <!-- Footer-->
     <footer class="footer-f">
-        <div class="container-footer">
-            <div class="footer-lg">
-                    <a href="" class="logo-f">
-                        <span class="logo-web">Web</span> Studio
-                    </a>
-                    <address class="adress-studio">
-                        <p class="place"> г. Киев, пр-т Леси Украинки, 26</p>
-                        <ul class="general adress-list">
-                            <li>
-                                <a href="tel:+380961111111" class="footer-mails">
-                                    +38 096 111 11 11
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:info@devstudio.com" class="footer-mails">
-                                  info@devstudio.com
-                                </a>
-                            </li>
-                        </ul>
-                    </address>
+        <div class="container cont-footer"> 
+            <div class="container-footer">
+                <div class="footer-lg">
+                        <a href="" class="logo-f">
+                            <span class="logo-web">Web</span> Studio
+                        </a>
+                        <address class="adress-studio">
+                            <p class="place"> г. Киев, пр-т Леси Украинки, 26</p>
+                            <ul class="general adress-list">
+                                <li>
+                                    <a href="mailto:info@devstudio.com" class="footer-mails">
+                                    info@devstudio.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+380961111111" class="footer-mails">
+                                        +38 096 111 11 11
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                </div>
+                <div class="footer-s">
+                    <h3 class="footer-h">Присоединяйтесь</h3>
+                    <ul class="footer-social">
+                        <li class="aria-footer">
+                            <a class="label-footer" href="" aria-label="Ссылка на Instagram">
+                                    <!-- <img src="./img/instagram.svg" alt="instagram"> -->
+                                <svg class="icon">
+                                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="aria-footer">
+                            <a class="label-footer" href="" aria-label="Ссылка на Twitter">
+                                    <!-- <img src="./img/twitter.svg" alt="twitter"> -->
+                                <svg class="icon">
+                                    <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="aria-footer">
+                            <a class="label-footer" href="" aria-label="Ссылка на Facebook">
+                                    <!-- <img src="./img/facebook.svg" alt="facebook">-->
+                                <svg class="icon">
+                                    <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="aria-footer">
+                            <a class="label-footer" href="" aria-label="Ссылка на LinkedIn">
+                                    <!--<img src="./img/linkedin.svg" alt="linkedin"> -->
+                                <svg class="icon">
+                                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="footer-subscription">
+                    <h3 class="footer-h">Подпишитесь на рассылку</h3>
+                    <form class="footer-form">
+                        <input class="footer-input" type="text" name="email" placeholder="E-mail"/>
+                        <button type="submit" class="footer-button">
+                                Подписаться <svg class="footer-icon" width="24" height="24">
+                                <use href="./img/symbol-defs.svg#icon-plant"></use>
+                                </svg>
+                        </button>
+                    </form>
+                </div> 
             </div>
-            <div class="footer-s">
-                <h3 class="footer-h">Присоединяйтесь</h3>
-                <ul class="footer-social">
-                    <li class="aria-footer">
-                        <a class="label-footer" href="" aria-label="Ссылка на Instagram">
-                                <!-- <img src="./img/instagram.svg" alt="instagram"> -->
-                            <svg class="icon">
-                                <use href="./img/symbol-defs.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="aria-footer">
-                        <a class="label-footer" href="" aria-label="Ссылка на Twitter">
-                                <!-- <img src="./img/twitter.svg" alt="twitter"> -->
-                            <svg class="icon">
-                                <use href="./img/symbol-defs.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="aria-footer">
-                        <a class="label-footer" href="" aria-label="Ссылка на Facebook">
-                                <!-- <img src="./img/facebook.svg" alt="facebook">-->
-                            <svg class="icon">
-                                <use href="./img/symbol-defs.svg#icon-facebook"></use>
-                            </svg>
-                         </a>
-                    </li>
-                    <li class="aria-footer">
-                        <a class="label-footer" href="" aria-label="Ссылка на LinkedIn">
-                                <!--<img src="./img/linkedin.svg" alt="linkedin"> -->
-                            <svg class="icon">
-                                <use href="./img/symbol-defs.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul> 
-            </div>
-            <div class="footer-subscription">
-                <h3 class="footer-h">Подпишитесь на рассылку</h3>
-                <form class="footer-form">
-                    <input class="footer-input" type="text" name="email" placeholder="E-mail"/>
-                    <button type="submit" class="footer-button">
-                            Подписаться <svg class="footer-icon" width="24" height="24">
-                            <use href="./img/symbol-defs.svg#icon-plant"></use>
-                            </svg>
-                    </button>
-                </form>
-            </div> 
         </div>
             <p class="developer">2020 &#10072; Developed by GoIT Students</p>
+        
     </footer>
+   
 <!-- Модальное окно-->   
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -476,7 +510,10 @@
             </button>
         </div>
     </div>
+
+
     <!-- Ставим перед закрывающим тегом body -->
+    <script src="./js/menu.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 </html> 
