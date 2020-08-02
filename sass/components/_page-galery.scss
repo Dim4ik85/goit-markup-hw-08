@@ -22,17 +22,18 @@
     display: block;
     text-decoration: none;
 }
+.card-portfolio {
+    display: block;
+    width: 100%;
+}
 .card {
-    width: calc((100% - 60px) / 3);
-    /*background: var(--primary-white-color);
-    border: 1px solid #EEEEEE;
-     border-radius: 4px; */
+    @media screen and (max-width: 767px) {
+      width: 450px;
+      margin-right: -15px;
+    }     
 }
-.card:not(:nth-child(3n)) {
-    margin-right: 30px;
-}
-.card:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
+.card:not(last-child) {
+        margin-bottom: 30px;
 }
 .card:hover, .card:focus,
 .card-foto:hover, .card-foto:focus {
@@ -88,7 +89,7 @@
     transform: translateY(100%);
     opacity: 1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-thumb {
     position: relative;
@@ -98,4 +99,72 @@
 .card .card-foto:focus .overlay {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: 767px) {
+    .list-bt {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .button-b {
+        margin-right: 8px;
+        margin-top: 15px;
+    }
+
+    .list-bt.button {
+        
+        display: flex;
+        
+        justify-content: left;
+        margin-bottom: 50px;
+    }
+}
+// Tablet 768
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    .galery {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0px;
+        margin: -15px;
+    }
+    .card-foto {
+        display: block;
+        text-decoration: none;
+    }
+    .card {
+        width: calc((100% - 4*15px) / 2);
+        margin: 15px;
+    }
+    .card:not(:last-child) {
+        margin-right: 15px;
+    }
+    .card:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 15px;
+    }    
+}
+
+// Desctop 1200
+
+@media screen and (min-width: 1200px) {
+    .card-foto {
+        display: block;
+        text-decoration: none;
+    }
+    .card {
+        width: calc((100% - 60px) / 3);
+        /*background: var(--primary-white-color);
+        border: 1px solid #EEEEEE;
+         border-radius: 4px; */
+    }
+    .card:not(:nth-child(3n)) {
+        margin-right: 30px;
+    }
+    .card:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+    }
+    
 }
